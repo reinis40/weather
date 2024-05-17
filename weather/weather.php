@@ -6,8 +6,8 @@ $location = $city;
 if (!empty($country)) {
     $location .= ',' . $country;
 }
-$endPoint = "https://api.openweathermap.org/data/2.5/weather?q=".($location)."&appid=".$apiKey;
-$response = file_get_contents($endPoint);
+$dataFromApi = "https://api.openweathermap.org/data/2.5/weather?q=".($location)."&appid=".$apiKey;
+$response = file_get_contents($dataFromApi);
 if ($response !== false) {
     $weatherData = json_decode($response, true);
     if ($weatherData !== null) {
