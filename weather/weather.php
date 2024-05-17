@@ -16,9 +16,9 @@ if ($response !== false) {
         $weatherDescription = $weatherData['weather'][0]['description'];
         echo "The temperature in $city is " . round($temperature, 2) . "°C with " . $weatherDescription . ".";
     } else {
-        exit('bad input');
+        exit('location not found');
     }
 } else {
-    exit('bad input');
+    exit('location not found');
 }
 
