@@ -12,7 +12,7 @@ if ($response !== false) {
     $weatherData = json_decode($response, true);
     if ($weatherData !== null) {
         $temperatureKelvin = $weatherData['main']['temp'];
-        $temperature = $temperatureKelvin - 273.15;//from kelvin to celsius
+        $temperature = $temperatureKelvin - 273.15;
         $weatherDescription = $weatherData['weather'][0]['description'];
         echo "The temperature in $city is " . round($temperature, 2) . "°C with " . $weatherDescription . ".";
     } else {
